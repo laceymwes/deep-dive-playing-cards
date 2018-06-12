@@ -17,12 +17,11 @@ class DeckTest {
   @Test
   void testDeal() {
     Deck deck = new Deck();
-    Card[] cards;
     Random rng = new SecureRandom();
     assertDoesNotThrow(new Executable() {
       @Override
       public void execute() throws Throwable {
-        cards = deck.deal(Suit.values().length * Rank.values().length);
+        unshuffledCards = deck.deal(Suit.values().length * Rank.values().length);
       }
     });
     assertThrows(Deck.InsufficientCardsException.class, new Executable() {
@@ -46,7 +45,7 @@ class DeckTest {
     });
     Set<Card> unshuffledSet = Set.of(unshuffledCards);
     Set<Card> shuffledset = Set.of(shuffledCards);
-    asserEquals(unshuffledSet, shuffledset);
+    assertEquals(unshuffledSet, shuffledset);
 
   }
 }
