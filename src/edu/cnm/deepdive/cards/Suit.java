@@ -8,15 +8,14 @@ public enum Suit {
 
   private String symbol;
 
-  private Suit(String symbol) {
+  Suit(String symbol) {
     this.symbol = symbol;
   }
 
+
   @Override
   public String toString() {
-    for (Suit suit : Suit.values()) {
-      // TODO Test suit.toString() for expected return value;
-    }
+    // TODO Test suit.toString() for expected return value;
     return symbol;
   }
 }
