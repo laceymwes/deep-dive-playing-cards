@@ -58,7 +58,7 @@ public class Deck {
   public Card[] deal(int numCards)
     throws InsufficientCardsException{
     Card[] cardsDealt = new Card[numCards];
-    for (int i = 0; i < numCards; --i) {
+    for (int i = 0; i < numCards; ++i) {
       cardsDealt[i] = deal();
     }
     return cardsDealt;
