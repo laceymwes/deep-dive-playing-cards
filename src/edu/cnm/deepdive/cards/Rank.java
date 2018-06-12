@@ -1,3 +1,5 @@
+package edu.cnm.deepdive.cards;
+
 public enum Rank {
   ACE("A"),
   TWO("2"),

@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import edu.cnm.deepdive.cards.Rank;
 import org.junit.jupiter.api.Test;
 
 class RankTest {
@@ -22,7 +23,7 @@ class RankTest {
   @Test
   void testToString() {
     for (Rank rank : Rank.values()) {
-      assertEquals(rank.toString(), ranks[rank.ordinal()] );
+      assertEquals(ranks[rank.ordinal()], rank.toString());
       System.out.println(rank.toString());
     }
   }
