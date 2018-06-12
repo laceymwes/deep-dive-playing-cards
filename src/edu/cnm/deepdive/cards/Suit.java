@@ -15,7 +15,6 @@ public enum Suit {
 
   @Override
   public String toString() {
-    // TODO Test suit.toString() for expected return value;
     return symbol;
   }
 }
