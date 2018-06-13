@@ -34,7 +34,9 @@ public class ConsoleGame {
           System.out.printf("Dealer's top card: %s.%n", dealer.getHand()[1]);
           System.out.println("Your play:");
           player.play();
-          dealer.play();
+          if (!player.isBusted()) {
+            dealer.play();
+          }
           if (dealer.isBlackjack()) {
             System.out.println("Dealer wins with Blackjack!");
             break;
