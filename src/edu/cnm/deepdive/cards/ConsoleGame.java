@@ -27,10 +27,9 @@ public class ConsoleGame {
           }
           scanner.nextLine();
         }
-
         if (bet > 0) {
           deck.shuffle(rng);
-          BlackjackHand dealer = new BlackjackDealer(deck);
+          BlackjackHand dealer = new BlackjackDealerHand(deck);
           BlackjackHand player = new InteractiveBlackjackHand(deck, scanner);
           System.out.printf("Dealer's top card: %s.%n", dealer.getHand()[1]);
           System.out.println("Your play:");

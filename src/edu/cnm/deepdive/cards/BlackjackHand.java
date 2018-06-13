@@ -39,13 +39,18 @@ public abstract class BlackjackHand implements Comparable<BlackjackHand> {
     update();
   }
 
+  protected BlackjackHand(List<Card> hand) throws InsufficientCardsException {
+    this.hand = hand;
+    this.deck = new Deck();
+    update();
+  }
+
   private void update() {
     boolean aceInHand = false;
     value = 0;
     soft = false;
     blackjack = false;
     busted = false;
-    int value = 0;
     for (Card card : hand) {
       if (card.getRank() == Rank.ACE) {
         aceInHand = true;
