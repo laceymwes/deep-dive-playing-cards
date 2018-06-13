@@ -35,6 +35,10 @@ public class ConsoleGame {
           System.out.println("Your play:");
           player.play();
           dealer.play();
+          if (dealer.isBlackjack()) {
+            System.out.println("Dealer wins with Blackjack!");
+            break;
+          }
           System.out.printf("Dealer's hand: %s.%n", dealer);
           int comparison = player.compareTo(dealer);
           if (comparison < 0) {
